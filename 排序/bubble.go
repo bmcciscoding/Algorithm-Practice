@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello World")
-	arr := []int{10, 33, 45, 88, 76, 23, 32, 55, 66, 92} // 5后面必须有 , 号
+	arr := []int{10, 33, 45, 88, 76, 23, 32, 55, 66, 92}
+	fmt.Println(arr)
 	fmt.Println(bubble(arr))
 }
 
