@@ -1,2 +1,2 @@
-# Go-Algorithm-Practice
- 学习 Go 语言，用算法练习
+# Algorithm-Practice
+算法练习
