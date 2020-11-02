@@ -8,6 +8,10 @@ import (
 func main() {
     sum()
     leanrSwitch()
+    leanrDefer()
+    learnPoint()
+    learnStruct()
+    learnArray()
 }
 
 func sum() {
@@ -40,4 +44,44 @@ func leanrSwitch() {
     case t > 12:
         fmt.Println(">12")        
     }
+}
+
+// count done 3 2 1 
+func leanrDefer() {
+    fmt.Println("count")
+    for i := 1; i <= 3; i++ {
+        defer fmt.Println(i)
+    }
+    fmt.Println("done")
+}
+
+func learnPoint() {
+    var p *int 
+    i := 42
+    p = &i
+    fmt.Println(*p)
+    *p = 21
+    fmt.Println(*p)
+    fmt.Println(p)
+}
+
+type Point struct {
+    X, Y int
+}
+func learnStruct() {
+    var (
+        v1 = Point{1, 2}
+        v2 = Point{X: 1}
+        v3 = Point{}
+    )
+    fmt.Println(v1, v2, v3)
+}
+
+func learnArray() {
+    p := []int{1, 2, 3, 4, 5}
+    fmt.Println(p)
+    fmt.Println("length:", len(p))
+    fmt.Println(p[2:4])
+    fmt.Println(p[:3])
+    fmt.Println(p[3:])
 }
