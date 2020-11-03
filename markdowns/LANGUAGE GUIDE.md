@@ -1,54 +1,26 @@
 # LANGUAGE GUIDE
-为了快速上手的学习 GO 这门语言，我决定通过和 Swift 对比。
 
-## The Basics
-
-### Constants and Variables
+## 常量和变量
 
 ```go
-const PI = 3.1415926
-var age int
-age := 18
+const PI = 3.1415926 // 常量声明时需要赋值
+var hour uint8 // 变量可以只声明类型，整型默认值为0
+min := 60 // 变量都简便写法 直接赋值
 ```
 
-### Type Annotations
-```go
-var msg string
-msg = "hello world"
-var hour, min, second int
-```
+## 支持类型
+1. 整型
+2. 浮点型
+3. 布尔
+4. 字符串
+5. 数组
+6. 切片
+7. 结构体
+8. 方法
+9. 接口
+10. 频道
 
-### Naming Constants and Variables
-```go
-// todo
-```
+### 数组和切片都区别
 
-### Comments
-```go
-// single line
-/*
-    mutil lines
-*/
-```
 
-### Semicolons
-
-### Intergers
-[整型范围](https://golang.org/ref/spec#Numeric_types)
-```go
-import "math" // 定义在 math 这个包里
-const MaxUInt32 = math.MaxUint32
-const MinInt32 = math.MinInt32
-```
-  
-### Type Safety and Type Inference
-```go
-var age int
-age = 18.5 // 报错: constant 18.5 truncated to integer
-```
-
-### Numeric Literals
-```go
-
-```
 

@@ -48,3 +48,18 @@ func NumericLiterals() {
 	const octal = 0o10101
 	const hexadecimal = 0x10101
 }
+
+func NumericTypeConversion() {
+	// const beNegative uint = -1 
+	// const tooBig int32 = math.MaxInt32 + 1
+}
+
+func IntegerAndFloatingPointConversion() {
+	const three = 3
+	const point = 0.1415926
+	const pi = float32(three) + point
+}
+
+func TypeAliases() {
+	type Double = complex64
+}
