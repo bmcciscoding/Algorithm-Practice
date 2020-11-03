@@ -1,22 +1,22 @@
-package main
+package base
 
 import (
     "fmt"
     "time"
 )
 
-func main() {
-    sum()
-    leanrSwitch()
-    leanrDefer()
-    learnPoint()
-    learnStruct()
-    learnArray()
-    learnDict()
-    learnClosure()
-}
+// func main() {
+//     leanrFor()
+//     leanrSwitch()
+//     leanrDefer()
+//     learnPoint()
+//     learnStruct()
+//     learnArray()
+//     learnDict()
+//     learnClosure()
+// }
 
-func sum() {
+func LearnFor() {
     sum := 0
     fmt.Println("begin for")
 	for i:=0; i<10; i++ {
