@@ -1,26 +1,10 @@
-# Algorithm-Practice
-算法练习
+# Go 都学习手册
 
-## 数据结构
+写给自己都 Go 都学习笔记
 
-- 数组
-- 栈
-- 队列
-- 链表
-- 二叉树
-- 多叉树
-- 图
-- 哈希表
+## 语法
+[Grammer](./markdowns/LANGUAGE%20GUIDE.md)
+## Beego 框架
+[Beego](./markdowns/Beego.md)
 
-## 算法
-
-- 排序算法
-- 链表删除、反转、环
-- 二叉树前、中、后遍历
-- 深度优先、广度优先
-- LRU 实现
-
-## LeetCode 经典题目
-
-- 
 
