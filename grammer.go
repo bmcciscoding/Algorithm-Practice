@@ -12,6 +12,8 @@ func main() {
     learnPoint()
     learnStruct()
     learnArray()
+    learnDict()
+    learnClosure()
 }
 
 func sum() {
@@ -84,4 +86,23 @@ func learnArray() {
     fmt.Println(p[2:4])
     fmt.Println(p[:3])
     fmt.Println(p[3:])
+}
+
+func learnDict() {
+    var m = map[string]Point {
+        "a": {1, 2},
+        "b": {2, 3},
+    }
+    fmt.Println(m)
+}
+
+func learnClosure() {
+    temp := 5
+    block := func(x, y int) int {
+        temp = x * y * temp
+        return temp
+    }
+    fmt.Println(block(1,2))
+    fmt.Println(block(2,4))
+    fmt.Println(temp)
 }
