@@ -3,33 +3,54 @@ package base
 
 import "fmt"
 
-type Student struct {
+// 封装 
+// 定一个类
+type Animal struct {
 	name string
+	Name string
 }
 
-func Test() {
-	s := Student{"haha"}
-	fmt.Println(s)
-	//sayHi(s)
-	s.sayHi()
-	fmt.Println(s)
-	//realSayHi(&s)
-	s.realSayHi()
-	fmt.Println(s)
+func NewStudent() *Animal {
+	a := new(Animal)
+	return a
 }
 
-func sayHi(p Student) {
-	p.name = "new name"
-}
-
-func (s Student) sayHi() {
+// 定义方法 方法名小写开头即为私有方法
+func (s Animal) sayHi() {
 	s.name = "name"
 }
 
-func realSayHi(p *Student) {
-	p.name = "real name"
+// 定义方法 方法名小写开头即为公开方法
+func (s Animal) SayHi() {
+	s.name = "name"
 }
 
-func (s *Student) realSayHi() {
+func (s *Animal) realSayHi() {
 	s.name = "real name"
+}
+
+// 继承 
+// 子类继承父类
+type Cat struct {
+	Animal
+	age int 
+}
+
+func (c *Cat) sleep() {
+	fmt.Println("sleep")
+	fmt.Println(c)
+}
+
+// 多态
+type Sleep interface {
+	sleep()
+}
+
+func test_Polymorphism(a Sleep) {
+	a.sleep()
+}
+
+func Test() {
+	cat := new(Cat)
+	test_Polymorphism(cat)
 }
