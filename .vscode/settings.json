@@ -1,3 +1,5 @@
 {
-  "go.goroot": "/Users/qiupeng/QP/Go-LearningGuide"
+  "go.goroot": "/Users/qiupeng/QP/Go-LearningGuide",
+  "go.inferGopath": true,
+  "go.alternateTools": {}
 }
