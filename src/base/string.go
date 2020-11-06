@@ -2,6 +2,7 @@ package base
 
 import "fmt"
 import "strings"
+import "reflect"
 
 func ShowString() {
 	// 字符串声明和赋值
@@ -11,12 +12,22 @@ func ShowString() {
 	// 字符串拼接
 	s4 := s1 + s2 +s3
 	fmt.Println(s4)
+	fmt.Println("s4[:1]\t", s4[:1])
+	fmt.Println("s4[3]\t", s4[2:3])
 	// 长度
 	s4len := len(s4)
 	fmt.Println(s4len)
-		// 遍历
+	// 遍历
+	// len
+	fmt.Println("for use len")
 	for i :=0; i<s4len; i++  {
-		fmt.Printf("%x\n", s4[i])
+		c := s4[i]
+		fmt.Printf("%c type is %s\n", c, reflect.TypeOf(c))
+	}
+	// range
+	fmt.Println("for use range")
+	for _, c := range s4 {
+		fmt.Printf("%c type is %s\n", c, reflect.TypeOf(c))
 	}
 	// 比较
 	if s4 != s3 {	
