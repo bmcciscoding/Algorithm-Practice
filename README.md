@@ -4,6 +4,8 @@
 
 ## 语法
 [Grammer](./markdowns/LANGUAGE%20GUIDE.md)
+### Go 的类型
+- [字符串](./markdowns/string.md)
 ## Beego 框架
 [Beego](./markdowns/Beego.md)
 

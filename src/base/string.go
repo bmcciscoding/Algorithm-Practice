@@ -5,6 +5,17 @@ import "strings"
 import "reflect"
 
 func ShowString() {
+
+ 		const nihongo = "日本語"
+    for index, runeValue := range nihongo {
+				fmt.Printf("%d : %#U\n", index, runeValue)
+        // fmt.Printf("%#U starts at byte position %d\n", runeValue, index)
+    }
+	
+
+
+
+	return
 	// 字符串声明和赋值
 	var s1 string
 	const s2 = "zhangsan"
