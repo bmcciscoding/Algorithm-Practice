@@ -12,9 +12,6 @@ func ShowString() {
         // fmt.Printf("%#U starts at byte position %d\n", runeValue, index)
     }
 	
-
-
-
 	return
 	// 字符串声明和赋值
 	var s1 string
