@@ -1,22 +1,16 @@
 package base
 
 import "fmt"
+import "sort"
 
 func ShowArraySliceMap() {
-	sum := 0
-	for i:=0; i<100; i++ {
-		if i%2 != 0 {
-			continue
-		}
-		sum += 1
-	}
-	fmt.Println("the sum is", sum)
-	use()
+	fmt.Println("show array usage")
+	array_usage()
 }
 
 func use() {
 	array := [5]string{"a", "b", "c", "d", "e"}
-	fmt.Println(array[2])
+	fmt.Println( array[2])
 
 	arr2 := [...]int{1, 2, 3}
 	fmt.Println(arr2)
@@ -50,4 +44,39 @@ func use() {
 	slice_s := []byte(s)
 	fmt.Println(s)
 	fmt.Println(slice_s)
+}
+
+// array 的
+func array_usage() {
+	// 创建数组
+	arr1 := [5]int{1, 2, 3, 4, 5}
+	fmt.Println("创建", arr1)
+
+	// 遍历数组
+	for i:=0; i<len(arr1); i++ {
+		fmt.Println("遍历", arr1[i])
+	}
+	
+	// 增、删、改、查
+	// arr1 = append(arr1, 4); // error: only slice
+	slice1 := arr1[0:]
+	slice1 = append(slice1, 6)
+	fmt.Println("增", slice1)
+
+	deleteIndex := 2
+	slice1 = append(slice1[:deleteIndex], slice1[deleteIndex+1:]...)
+	fmt.Println("删", slice1)
+
+	slice1[2] = 20
+	fmt.Println("改", slice1)
+
+	fmt.Println("查", slice1[2])
+
+	// 排序
+	sort.Ints(slice1)
+	fmt.Println("排序", slice1)
+
+	// 倒转
+	sort.Sort(sort.Reverse(sort.IntSlice(slice1)))
+	fmt.Println("倒转", slice1)
 }
