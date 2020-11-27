@@ -1,10 +1,8 @@
 package main
 
-import "base"
 import "github.com/gin-gonic/gin"
 
 func main() {
-	base.ShowArraySliceMap()
 		r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{

@@ -19,6 +19,14 @@ const sample = "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98" // fmt.Println => ��=� �
 ```
 假设我们写了上面这些字符串，是一些16进制的，打印出了乱码。
 
+## 字符串常用方法
+
+格式化字符串
+```go
+p1 := "i am p1"
+str := fmt.Sprintf("foo: %s", bar)
+```
+
 
 **参考**
 - [The Go Blog](https://blog.golang.org/string)
